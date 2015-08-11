@@ -1,14 +1,17 @@
 class AdminController < ApplicationController
-	protect_from_forgery with: :exception
 	before_filter :authenticate_admin!
 	
 	
 	def index
-		@page = Page.order('created_at DESC')
+		@page = Page.all
 	end
 		
 	def new
 		@page = Page.new
+	end
+	
+	def show
+		@page = Page.find(params[:id])
 	end
 	
 	def create

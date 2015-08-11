@@ -4,5 +4,5 @@ class Admin < ActiveRecord::Base
   devise :database_authenticatable, :timeoutable, 
          :recoverable, :rememberable, :trackable, :validatable
 
- has_many :pages
+
 end
