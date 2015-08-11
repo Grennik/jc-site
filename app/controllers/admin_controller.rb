@@ -4,16 +4,16 @@ class AdminController < ApplicationController
 	
 	
 	def index
-		@pages = Page.order('created_at DESC')
+		@page = Page.order('created_at DESC')
 	end
 		
 	def new
-		@pages = Page.new
+		@page = Page.new
 	end
 	
 	def create
-		@pages = Page.new(page_params)
-		if @pages.save
+		@page = Page.new(page_params)
+		if @page.save
 		else
 			render 'new'
 		end
@@ -21,7 +21,7 @@ class AdminController < ApplicationController
 	
 	private
 		def page_parms
-			params.require(:pages).permit(:name, :description, :url, :image)
+			params.require(:page).permit(:name, :description, :url, :image)
 		end
 	
 	def destroy
