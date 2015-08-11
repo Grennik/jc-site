@@ -2,10 +2,17 @@ Rails.application.routes.draw do
   
   
   devise_for :admins, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+
   get 'home' => 'pages#index', as: :home
+
   get 'admin/home' => 'admin#index', as: :admin
-  get 'admin/home' => 'admin#new'
-  post 'admin/home' => 'admin#create'
+
+  scope 'admin' do
+
+    resources :pages, :controller => "admin"
+
+  end
+
   root 'pages#index'
   
 

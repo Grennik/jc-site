@@ -3,7 +3,8 @@ class AdminController < ApplicationController
 	
 	
 	def index
-		@page = Page.all
+		@page = Page.new
+		@pages = Page.all
 	end
 		
 	def new
@@ -15,15 +16,16 @@ class AdminController < ApplicationController
 	end
 	
 	def create
-		@page = Page.new(page_params)
-		if @page.save
+		page = Page.create page_params
+		if page.persisted?
+			redirect_to action: :index
 		else
 			render 'new'
 		end
 	end
 	
 	private
-		def page_parms
+		def page_params
 			params.require(:page).permit(:name, :description, :url, :image)
 		end
 	
