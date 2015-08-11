@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JC Productions</title>
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" charset="utf-8" />
+  <meta name="googlebot" content="index, follow">
+  <meta name="robots" content="noodp">
+  <meta name="author" content="Joseph Ciervo Productions Web Development, - http://www.josephciervo.com" />
+  <meta name="description" content="Joseph Ciervo's personal web-development and design site. A freelancer located in Westchester NY who develops proffesional websites locally and over the web." />
+  <meta name="abstract" content="Joseph Ciervo's personal web-development and design site. A freelancer located in Westchester NY who develops proffesional websites locally and over the web." />
+  <meta name="keywords" content="Joseph Ciervo, Web Development, Web Design, New York, Westchester, Tri State Area, Freelance"/>
+  <meta name="subject" content="Joseph Ciervo, Web Development, Web Design, New York, Westchester, Tri State Area, Freelance"/>
+  <meta name="copyright" content="Copyright &copy; Joseph Ciervo Productions, All Rights Reserved" />
+  <meta name="URL" content="http://www.josephciervo.com" />
+  <meta name="classification" content="Web Design" />
+  <meta name="category" content="Web Design" />
+  <meta name="expires" content="never" />
+  <meta name="distribution" content="global" />
+  <meta name="language" content="en-us" />
+  <meta name="MS.LOCALE" content="EN-US" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container-liquid" id="background-top">
+    <div class="row">
+      <div class="col-lg-3">
+        <%= link_to(@root) do %>
+        <img src="images/jclogo.png" alt="JC Logo" class="img-responsive" id="logo">
+        <% end %>
+      </div>
+      <div class="col-lg-offset-5 col-lg-4">
+        <div class="navbar navbar-inverse navbar-right" role="navagation" id="navgationBar">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="nav-toggle">
+            <ul class="nav navbar-nav">
+              <li><%= link_to :home do %>Home<% end %></li>
+              <li><%= link_to :home do %>Info<% end %></li>
+              <li><%= link_to :home do %>About<% end %></li>
+              <li><%= link_to :home do %>Portfolio<% end %></li>
+              <li id="contact"><%= link_to :home do %>Contact<% end %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<%= yield %>
+
+<script type="text/javascript" src="javascript/smoothscroll.js"></script>
+</body>
+</html>

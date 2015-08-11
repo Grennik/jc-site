@@ -1,0 +1,85 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ #background-image{
+	 width: 100%;
+	 z-index: -1;
+	 -webkit-filter: grayscale(1) brightness(0.6);
+	 -moz-filter: grayscale(1) brightness(0.6);
+	 filter: grayscale(1) brightness(0.6);
+	 position: absolute;
+	 top: 0px;
+	 
+	 -moz-animation-name: fadein;
+	 -moz-animation-duration: 20s;
+	 
+	 
+	 -webkit-animation: fadein;
+	 -webkit-animation-duration: 15s;
+	 
+	 
+	 animation-name: fadein;
+	 animation-duration: 15s;
+	
+ }
+ #black-background{
+	 width: 100%;
+	 z-index: -2;
+	 top: 0px;
+	 position: absolute;
+ }
+ #heading-text{
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 2px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	
+	-moz-animation-name: fadein;
+	 -moz-animation-duration: 10s;
+	 
+	 
+	 -webkit-animation: fadein;
+	 -webkit-animation-duration: 10s;
+	 
+	 
+	 animation-name: fadein;
+	 animation-duration: 10s;
+	 
+	 
+	 #heading-bottom{
+		 font-size: 5em;
+	 }
+	 #contact-bottom a{
+		 color: white;
+		 font-size: 1.3em;
+		 border: 2px solid white;
+		 padding: 15px;
+		 text-decoration: none;
+	 }
+	 #contact-bottom a:hover{
+		 color: black;
+		 background-color: white;
+	 }
+	 #icon-header {
+		 padding-top: 160px;
+		 font-size: 2em;
+		 color: white;
+		 
+	 }
+	 #icon-header:hover{
+		 color: darkgray;
+	 }
+ }
+#body-area{
+	background-color: white;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	text-align: center;
+	padding-top: 30px;
+	p{
+		padding-top: 50px;
+		padding-bottom: 50px;
+		font-size: 1.2em;
+		color: darkgray;
+	}
+}

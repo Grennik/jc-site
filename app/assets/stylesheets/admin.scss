@@ -1,0 +1,22 @@
+#admin-dash{
+	background-color: dimgray;
+	border-style: 1px solid black;
+	color: white;
+	text-align: right;
+	a{
+		text-decoration: none;
+		color:white;
+		font-family: 'Alegreya Sans SC', sans-serif;
+		font-size: 1.5em;
+		border-style: 2px solid white;
+		padding: 15px;
+	}
+	a:hover{
+		color:dimgray;
+		background-color: white;
+	}
+}
+#admin-body{
+	font-family: 'Alegreya Sans SC', sans-serif;
+	text-align: center;
+}
